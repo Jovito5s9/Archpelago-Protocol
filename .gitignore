@@ -3,4 +3,5 @@
 /android/
 icon.svg
 *.import
+*.uid
 .gitattributes

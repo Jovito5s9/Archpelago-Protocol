@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dqqqy4hpcdqxn"]
 
 [ext_resource type="PackedScene" uid="uid://ctl3l4rl4ksn5" path="res://scenes/player.tscn" id="1_k1lxp"]
+[ext_resource type="PackedScene" uid="uid://ci6t0bnar7qfq" path="res://scenes/cubo.tscn" id="2_3ti6u"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3ti6u"]
 
@@ -23,3 +24,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1881919285]
 transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
+
+[node name="cubo" parent="." unique_id=1661091355 instance=ExtResource("2_3ti6u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2782106, 2.0373893, 1.7396894)
