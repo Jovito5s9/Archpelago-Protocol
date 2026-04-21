@@ -17,6 +17,7 @@ mesh = SubResource("BoxMesh_3ti6u")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1260462113]
 transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
+top_level = true
 shape = SubResource("BoxShape3D_v7ld6")
 
 [node name="player" parent="." unique_id=1996350048 instance=ExtResource("1_k1lxp")]
