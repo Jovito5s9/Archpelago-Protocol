@@ -1,39 +1,18 @@
 [gd_scene format=3 uid="uid://ctl3l4rl4ksn5"]
 
 [ext_resource type="Script" uid="uid://bi5m3i7qhndbx" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://d386has26k6ek" path="res://scenes/entity.tscn" id="1_g2els"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_u8vuu"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vyb7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g2els"]
 albedo_color = Color(0, 0, 1, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_3vyb7"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_3vyb7"]
-
-[node name="player" type="CharacterBody3D" unique_id=1996350048]
+[node name="player" unique_id=1661091355 instance=ExtResource("1_g2els")]
 script = ExtResource("1_3vyb7")
+vida_maxima = 12
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=490022489]
-shape = SubResource("BoxShape3D_u8vuu")
+[node name="MeshInstance3D" parent="." index="0" unique_id=176001159]
+material_override = SubResource("StandardMaterial3D_g2els")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=339943573]
-material_override = SubResource("StandardMaterial3D_3vyb7")
-mesh = SubResource("BoxMesh_3vyb7")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1555383262]
+[node name="Camera3D" type="Camera3D" parent="." index="3" unique_id=1721947153]
 transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 7, 3)
 rotation_order = 0
-
-[node name="ataque" type="Area3D" parent="." unique_id=1174345575]
-
-[node name="collision" type="CollisionShape3D" parent="ataque" unique_id=1809628935]
-shape = SubResource("BoxShape3D_3vyb7")
-disabled = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ataque" unique_id=126716201]
-visible = false
-material_override = SubResource("StandardMaterial3D_3vyb7")
-mesh = SubResource("BoxMesh_3vyb7")
-
-[connection signal="body_entered" from="ataque" to="." method="_on_ataque_acertado"]

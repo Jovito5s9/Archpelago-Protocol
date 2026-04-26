@@ -4,6 +4,7 @@ const MAX_SPEED = 6.5
 const ACCELERATE = 0.3
 const JUMP_VELOCITY = 6.5
 
+
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("punch"):
 		atacar()
