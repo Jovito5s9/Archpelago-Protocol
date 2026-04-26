@@ -31,4 +31,8 @@ rotation_order = 0
 shape = SubResource("BoxShape3D_3vyb7")
 disabled = true
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ataque" unique_id=126716201]
+material_override = SubResource("StandardMaterial3D_3vyb7")
+mesh = SubResource("BoxMesh_3vyb7")
+
 [connection signal="body_entered" from="ataque" to="." method="_on_ataque_acertado"]
