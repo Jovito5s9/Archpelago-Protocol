@@ -32,6 +32,7 @@ shape = SubResource("BoxShape3D_3vyb7")
 disabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ataque" unique_id=126716201]
+visible = false
 material_override = SubResource("StandardMaterial3D_3vyb7")
 mesh = SubResource("BoxMesh_3vyb7")
 

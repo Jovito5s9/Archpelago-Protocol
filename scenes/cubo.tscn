@@ -9,7 +9,14 @@ albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ue4r5"]
 
-[node name="cubo" type="CharacterBody3D" unique_id=1661091355]
+[sub_resource type="BoxShape3D" id="BoxShape3D_t4y38"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2wega"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_odofd"]
+
+[node name="cubo" type="CharacterBody3D" unique_id=1661091355 groups=["enemy"]]
 script = ExtResource("1_ue4r5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=176001159]
@@ -18,3 +25,14 @@ mesh = SubResource("BoxMesh_dx6ei")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=121942483]
 shape = SubResource("BoxShape3D_ue4r5")
+
+[node name="ataque" type="Area3D" parent="." unique_id=1522599598]
+
+[node name="collision" type="CollisionShape3D" parent="ataque" unique_id=38531353]
+shape = SubResource("BoxShape3D_t4y38")
+disabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ataque" unique_id=1328208276]
+visible = false
+material_override = SubResource("StandardMaterial3D_2wega")
+mesh = SubResource("BoxMesh_odofd")
